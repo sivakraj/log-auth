@@ -25,6 +25,10 @@
     </servlet-mapping>
 
     <error-page>
+        <error-code>401</error-code>
+        <location>/html/error.html</location>
+    </error-page>
+    <error-page>
         <exception-type>java.lang.Throwable</exception-type>
         <location>/html/error.html</location>
     </error-page>
