@@ -1,4 +1,6 @@
-package in.blue;
+package in.blue.exception;
+
+import in.blue.model.LoginDetails;
 
 public class LoginException extends RuntimeException {
 

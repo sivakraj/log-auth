@@ -1,5 +1,7 @@
-package in.blue;
+package in.blue.controller;
 
+import in.blue.exception.LoginException;
+import in.blue.model.LoginDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

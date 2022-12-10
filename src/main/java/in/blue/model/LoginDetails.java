@@ -1,4 +1,4 @@
-package in.blue;
+package in.blue.model;
 
 import org.springframework.http.HttpStatus;
 
