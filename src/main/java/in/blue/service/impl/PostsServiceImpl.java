@@ -74,4 +74,23 @@ public class PostsServiceImpl implements PostsService {
         return response.getStatusCode().is2xxSuccessful() ? response.getBody() : null;
     }
 
+    @Override
+    public Post createPost(Post post) {
+        //Set required header values here
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+
+        //wrap the headers to HttpEntity
+        HttpEntity<Post> httpEntity = new HttpEntity<>(post, httpHeaders);
+
+        ResponseEntity<Post> response = restTemplate
+                .exchange(
+                        postsBaseUrl + "/posts",
+                        HttpMethod.POST,
+                        httpEntity,
+                        Post.class
+                );
+        return response.getStatusCode().is2xxSuccessful() ? response.getBody() : null;
+    }
+
 }

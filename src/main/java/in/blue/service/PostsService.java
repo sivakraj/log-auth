@@ -10,4 +10,6 @@ public interface PostsService {
 
     List<Post> getPosts();
 
+    Post createPost(Post post);
+
 }
